@@ -90,13 +90,7 @@ export function Footer() {
         {/* Powered by IST logo section */}
         <div className="flex items-center gap-2 bg-white/5 px-3 py-1.5 rounded-full border border-white/10">
           <span>Powered by</span>
-          <div className="flex items-center gap-1">
-            <svg width="14" height="14" viewBox="0 0 100 100" fill="none" className="inline-block">
-              <circle cx="50" cy="50" r="46" fill="#1E40AF" stroke="#00FFA3" strokeWidth="6" />
-              <path d="M30 50 L45 65 L72 32" stroke="#FFFFFF" strokeWidth="10" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-            <span className="font-display font-extrabold text-white">IST</span>
-          </div>
+          <img src="/ist-logo.png" alt="IST Logo" className="h-5 w-auto object-contain" />
         </div>
       </div>
     </footer>
