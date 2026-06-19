@@ -82,7 +82,7 @@ function AboutPage() {
           <div className="mt-12 relative border-l border-[#E2E8F0] ml-3">
             {timeline.map((t, i) => (
               <motion.div key={i} initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="relative pl-8 pb-12 last:pb-0">
-                <span className="absolute -left-[7px] top-1 w-3.5 h-3.5 rounded-full bg-gradient-to-br from-[#00D4FF] to-[#00FFA3]" />
+                <span className="absolute -left-[7px] top-1 w-3.5 h-3.5 rounded-full bg-gradient-to-br from-[#5BA829] to-[#8CE036]" />
                 <div className="text-sm text-[#0F172A]/50 font-mono">{t.year}</div>
                 <h4 className="font-display font-semibold text-xl mt-1">{t.title}</h4>
                 <p className="mt-2 text-[#0F172A]/65">{t.desc}</p>
@@ -98,7 +98,7 @@ function AboutPage() {
           <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {team.map((m, i) => (
               <div key={i} className="p-6 rounded-2xl bg-white/5 border border-white/10">
-                <div className="w-14 h-14 rounded-full bg-gradient-to-br from-[#00D4FF] to-[#00FFA3] grid place-items-center text-[#0F172A] font-display font-bold text-lg">{m.name.split(" ").map((p) => p[0]).join("")}</div>
+                <div className="w-14 h-14 rounded-full bg-gradient-to-br from-[#5BA829] to-[#8CE036] grid place-items-center text-[#0F172A] font-display font-bold text-lg">{m.name.split(" ").map((p) => p[0]).join("")}</div>
                 <div className="mt-4 font-display font-semibold text-lg">{m.name}</div>
                 <div className="text-sm text-white/60">{m.role}</div>
               </div>

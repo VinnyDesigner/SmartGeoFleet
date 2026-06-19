@@ -15,8 +15,8 @@ function SectionTitle({ eyebrow, title, subtitle, dark = false, center = true }:
   return (
     <div className={`${center ? "text-center mx-auto" : ""} max-w-3xl`}>
       {eyebrow && (
-        <div className={`inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-medium ${dark ? "bg-white/5 text-[#00FFA3] border border-white/10" : "bg-[#0F172A]/5 text-[#0F172A] border border-[#0F172A]/10"}`}>
-          <span className="w-1.5 h-1.5 rounded-full bg-[#00D4FF]" />
+        <div className={`inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-medium ${dark ? "bg-white/5 text-[#8CE036] border border-white/10" : "bg-[#0F172A]/5 text-[#0F172A] border border-[#0F172A]/10"}`}>
+          <span className="w-1.5 h-1.5 rounded-full bg-[#5BA829]" />
           {eyebrow}
         </div>
       )}
@@ -38,10 +38,17 @@ const fadeUp: Variants = {
 
 /* ---------- Trust ---------- */
 export function Trust() {
-  const items = [
-    "LOGISTIQ", "TRANSCORE", "BUILDWELL", "GOV·FLEET", "RAPID·DELIVERY",
-    "SCHOOL·NET", "NORTHWIND", "URBANMOVE", "FIELDOPS", "AGRIPLEX"
+  const logos = [
+    { name: "Kastech", src: "/kastech.png" },
+    { name: "Alisteshaar", src: "/alisteshaar.png" },
+    { name: "AIMS", src: "/aims.png" },
+    { name: "Plural", src: "/plural.png" },
+    { name: "Imaginx", src: "/imaginx.png" }
   ];
+
+  // Duplicate logos multiple times to ensure the marquee fills the screen width and loops seamlessly
+  const repeatedLogos = [...logos, ...logos, ...logos, ...logos];
+
   return (
     <section className="py-14 bg-white border-y border-[#E2E8F0]">
       <div className="mx-auto max-w-7xl px-6">
@@ -49,10 +56,18 @@ export function Trust() {
           Trusted by logistics &amp; transportation leaders
         </p>
         <div className="mt-8 overflow-hidden relative">
-          <div className="flex gap-14 animate-marquee whitespace-nowrap">
-            {[...items, ...items].map((n, i) => (
-              <div key={i} className="text-2xl font-display font-bold tracking-tight text-[#0F172A]/40 hover:text-[#0F172A] transition-colors">
-                {n}
+          <div className="flex items-center gap-20 animate-marquee whitespace-nowrap">
+            {repeatedLogos.map((logo, i) => (
+              <div key={i} className="inline-block shrink-0">
+                <img
+                  src={logo.src}
+                  alt={logo.name}
+                  className={`w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 ${
+                    logo.name === "Kastech"
+                      ? "h-16 md:h-20"
+                      : "h-10 md:h-12"
+                  }`}
+                />
               </div>
             ))}
           </div>
@@ -93,9 +108,9 @@ export function Why() {
               whileInView="show"
               viewport={{ once: true, margin: "-80px" }}
               custom={i}
-              className="group relative rounded-2xl bg-white border border-[#E2E8F0] p-6 hover:border-[#00D4FF] hover:-translate-y-1 transition-all duration-300 shadow-[0_1px_2px_rgba(15,23,42,0.04)] hover:shadow-[0_20px_50px_-20px_rgba(0,212,255,0.4)]"
+              className="group relative rounded-2xl bg-white border border-[#E2E8F0] p-6 hover:border-[#5BA829] hover:-translate-y-1 transition-all duration-300 shadow-[0_1px_2px_rgba(15,23,42,0.04)] hover:shadow-[0_20px_50px_-20px_rgba(0,212,255,0.4)]"
             >
-              <div className="w-11 h-11 rounded-xl grid place-items-center bg-[#0F172A] text-[#00FFA3] group-hover:bg-gradient-to-br group-hover:from-[#00D4FF] group-hover:to-[#00FFA3] group-hover:text-[#0F172A] transition-all">
+              <div className="w-11 h-11 rounded-xl grid place-items-center bg-[#0F172A] text-[#8CE036] group-hover:bg-gradient-to-br group-hover:from-[#5BA829] group-hover:to-[#8CE036] group-hover:text-[#0F172A] transition-all">
                 <f.i className="w-5 h-5" />
               </div>
               <h3 className="mt-5 font-display font-semibold text-lg text-[#0F172A]">{f.t}</h3>
@@ -166,7 +181,7 @@ export function Showcase() {
               onClick={() => setTab(t.id)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                 tab === t.id
-                  ? "bg-gradient-to-r from-[#00D4FF] to-[#00FFA3] text-[#0F172A] shadow-[0_10px_30px_-10px_rgba(0,212,255,0.6)]"
+                  ? "bg-gradient-to-r from-[#5BA829] to-[#8CE036] text-[#0F172A] shadow-[0_10px_30px_-10px_rgba(0,212,255,0.6)]"
                   : "bg-white/5 text-white/70 hover:bg-white/10 border border-white/10"
               }`}
             >
@@ -190,7 +205,7 @@ export function Showcase() {
                 <ul className="mt-6 space-y-3">
                   {c.bullets.map((b) => (
                     <li key={b} className="flex items-start gap-3 text-white/80">
-                      <span className="mt-1 w-5 h-5 rounded-full bg-[#00FFA3]/15 grid place-items-center text-[#00FFA3]">
+                      <span className="mt-1 w-5 h-5 rounded-full bg-[#8CE036]/15 grid place-items-center text-[#8CE036]">
                         <Check className="w-3 h-3" />
                       </span>
                       {b}
@@ -232,14 +247,14 @@ function DashboardMock({ tab }: { tab: string }) {
           <svg viewBox="0 0 400 260" className="absolute inset-0 w-full h-full">
             {Array.from({ length: 20 }).map((_, x) =>
               Array.from({ length: 12 }).map((_, y) => (
-                <circle key={`${x}-${y}`} cx={x * 20 + 10} cy={y * 22 + 10} r="0.8" fill="#00D4FF" opacity="0.25" />
+                <circle key={`${x}-${y}`} cx={x * 20 + 10} cy={y * 22 + 10} r="0.8" fill="#5BA829" opacity="0.25" />
               ))
             )}
-            <path d="M30,210 C 120,80 180,240 280,90 S 380,160 380,40" fill="none" stroke="#00D4FF" strokeWidth="2" className="animate-dash" />
-            <circle r="5" fill="#00FFA3">
+            <path d="M30,210 C 120,80 180,240 280,90 S 380,160 380,40" fill="none" stroke="#5BA829" strokeWidth="2" className="animate-dash" />
+            <circle r="5" fill="#8CE036">
               <animateMotion dur="7s" repeatCount="indefinite" path="M30,210 C 120,80 180,240 280,90 S 380,160 380,40" />
             </circle>
-            <rect x="240" y="120" width="120" height="80" rx="8" fill="#00FFA3" fillOpacity="0.08" stroke="#00FFA3" strokeDasharray="6 6" />
+            <rect x="240" y="120" width="120" height="80" rx="8" fill="#8CE036" fillOpacity="0.08" stroke="#8CE036" strokeDasharray="6 6" />
           </svg>
         </div>
         <div className="col-span-2 flex flex-col gap-3">
@@ -247,7 +262,7 @@ function DashboardMock({ tab }: { tab: string }) {
             <div key={i} className="rounded-lg bg-white/5 border border-white/5 p-2">
               <div className="h-2 w-12 rounded bg-white/10" />
               <div className="mt-2 h-1.5 rounded bg-white/10 overflow-hidden">
-                <motion.div initial={{ width: 0 }} animate={{ width: `${40 + i * 12}%` }} transition={{ duration: 1.2, delay: i * 0.1 }} className="h-full bg-gradient-to-r from-[#00D4FF] to-[#00FFA3]" />
+                <motion.div initial={{ width: 0 }} animate={{ width: `${40 + i * 12}%` }} transition={{ duration: 1.2, delay: i * 0.1 }} className="h-full bg-gradient-to-r from-[#5BA829] to-[#8CE036]" />
               </div>
             </div>
           ))}
@@ -287,9 +302,9 @@ export function Solutions() {
               custom={i}
               className="group relative rounded-3xl p-8 bg-[#F8FAFC] border border-[#E2E8F0] hover:bg-[#0F172A] hover:text-white transition-all duration-500 overflow-hidden"
             >
-              <div className="absolute -right-16 -bottom-16 w-48 h-48 rounded-full bg-gradient-to-br from-[#00D4FF]/0 to-[#00FFA3]/0 group-hover:from-[#00D4FF]/30 group-hover:to-[#00FFA3]/20 blur-2xl transition-all duration-700" />
+              <div className="absolute -right-16 -bottom-16 w-48 h-48 rounded-full bg-gradient-to-br from-[#5BA829]/0 to-[#8CE036]/0 group-hover:from-[#5BA829]/30 group-hover:to-[#8CE036]/20 blur-2xl transition-all duration-700" />
               <div className="relative">
-                <div className="w-12 h-12 rounded-xl grid place-items-center bg-[#0F172A] text-[#00FFA3] group-hover:bg-gradient-to-br group-hover:from-[#00D4FF] group-hover:to-[#00FFA3] group-hover:text-[#0F172A] transition">
+                <div className="w-12 h-12 rounded-xl grid place-items-center bg-[#0F172A] text-[#8CE036] group-hover:bg-gradient-to-br group-hover:from-[#5BA829] group-hover:to-[#8CE036] group-hover:text-[#0F172A] transition">
                   <s.i className="w-5 h-5" />
                 </div>
                 <h3 className="mt-6 font-display font-semibold text-xl">{s.t}</h3>
@@ -329,7 +344,7 @@ export function Industries() {
             >
               <div className="relative h-40 bg-[#0F172A] overflow-hidden">
                 <div className="absolute inset-0 bg-grid opacity-50" />
-                <div className="absolute inset-0 bg-gradient-to-br from-[#00D4FF]/20 to-[#00FFA3]/10" />
+                <div className="absolute inset-0 bg-gradient-to-br from-[#5BA829]/20 to-[#8CE036]/10" />
                 <div className="absolute inset-0 grid place-items-center">
                   <s.i className="w-14 h-14 text-white/90 group-hover:scale-110 transition-transform duration-500" strokeWidth={1.5} />
                 </div>
@@ -337,7 +352,7 @@ export function Industries() {
               <div className="p-6">
                 <h3 className="font-display font-semibold text-lg text-[#0F172A]">{s.t}</h3>
                 <p className="mt-2 text-sm text-[#0F172A]/65">{s.d}</p>
-                <a href="#cta" className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-[#0F172A] hover:text-[#00D4FF] transition">
+                <a href="#cta" className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-[#0F172A] hover:text-[#5BA829] transition">
                   Explore <ArrowRight className="w-4 h-4" />
                 </a>
               </div>
@@ -374,7 +389,7 @@ export function Advanced() {
                 variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} custom={i}
                 className="flex gap-3 p-4 rounded-xl glass"
               >
-                <div className="w-9 h-9 rounded-lg grid place-items-center bg-white/10 text-[#00FFA3] shrink-0">
+                <div className="w-9 h-9 rounded-lg grid place-items-center bg-white/10 text-[#8CE036] shrink-0">
                   <a.i className="w-4 h-4" />
                 </div>
                 <div>
@@ -435,7 +450,7 @@ export function Stats() {
   return (
     <section className="py-24 bg-[#0F172A] text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-grid opacity-40" />
-      <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#00D4FF]/15 blur-[120px] rounded-full" />
+      <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#5BA829]/15 blur-[120px] rounded-full" />
       <div className="relative mx-auto max-w-7xl px-6 grid grid-cols-2 lg:grid-cols-4 gap-8">
         {stats.map((s) => (
           <div key={s.l} className="text-center">
@@ -474,7 +489,7 @@ export function HowItWorks() {
             >
               <div className="mx-auto w-24 h-24 rounded-3xl bg-[#0F172A] text-white grid place-items-center relative shadow-[0_20px_50px_-20px_rgba(15,23,42,0.6)]">
                 <s.i className="w-9 h-9" strokeWidth={1.6} />
-                <span className="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-gradient-to-br from-[#00D4FF] to-[#00FFA3] text-[#0F172A] grid place-items-center text-xs font-bold">
+                <span className="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-gradient-to-br from-[#5BA829] to-[#8CE036] text-[#0F172A] grid place-items-center text-xs font-bold">
                   {i + 1}
                 </span>
               </div>
@@ -506,7 +521,7 @@ export function Testimonials() {
       <div className="mx-auto max-w-5xl px-6">
         <SectionTitle eyebrow="Customer Stories" title="Loved by enterprise fleets" />
         <div className="mt-14 relative rounded-3xl bg-white border border-[#E2E8F0] p-10 md:p-14 shadow-[0_30px_80px_-40px_rgba(15,23,42,0.2)]">
-          <Quote className="absolute top-8 right-8 w-12 h-12 text-[#00D4FF]/30" />
+          <Quote className="absolute top-8 right-8 w-12 h-12 text-[#5BA829]/30" />
           <AnimatePresence mode="wait">
             <motion.div key={idx} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.5 }}>
               <p className="text-2xl md:text-3xl font-display font-medium text-[#0F172A] leading-snug">
@@ -520,7 +535,7 @@ export function Testimonials() {
                   <div className="font-semibold text-[#0F172A]">{q.n}</div>
                   <div className="text-sm text-[#0F172A]/60">{q.r}</div>
                 </div>
-                <div className="ml-auto hidden md:block text-sm font-medium text-[#0F172A] bg-gradient-to-r from-[#00D4FF]/15 to-[#00FFA3]/15 border border-[#00D4FF]/20 rounded-full px-4 py-1.5">
+                <div className="ml-auto hidden md:block text-sm font-medium text-[#0F172A] bg-gradient-to-r from-[#5BA829]/15 to-[#8CE036]/15 border border-[#5BA829]/20 rounded-full px-4 py-1.5">
                   {q.m}
                 </div>
               </div>
@@ -555,7 +570,7 @@ export function Resources() {
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[#0F172A]/40" />
             <input
               placeholder="Search resources…"
-              className="w-full rounded-full bg-white border border-[#E2E8F0] pl-11 pr-4 py-3 text-sm outline-none focus:border-[#00D4FF] focus:ring-2 focus:ring-[#00D4FF]/20 transition"
+              className="w-full rounded-full bg-white border border-[#E2E8F0] pl-11 pr-4 py-3 text-sm outline-none focus:border-[#5BA829] focus:ring-2 focus:ring-[#5BA829]/20 transition"
             />
           </div>
         </div>
@@ -566,11 +581,11 @@ export function Resources() {
               className="group rounded-2xl bg-white border border-[#E2E8F0] p-6 hover:-translate-y-1 hover:shadow-[0_20px_40px_-20px_rgba(15,23,42,0.2)] transition-all"
             >
               <div className="flex items-center justify-between">
-                <span className="text-[10px] uppercase tracking-wider text-[#00D4FF] font-semibold">{r.k}</span>
+                <span className="text-[10px] uppercase tracking-wider text-[#5BA829] font-semibold">{r.k}</span>
                 <r.i className="w-4 h-4 text-[#0F172A]/40" />
               </div>
               <div className="mt-4 font-display font-semibold text-[#0F172A] leading-snug">{r.t}</div>
-              <div className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-[#0F172A] group-hover:text-[#00D4FF] transition">
+              <div className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-[#0F172A] group-hover:text-[#5BA829] transition">
                 {r.d} <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition" />
               </div>
             </motion.a>
@@ -620,7 +635,7 @@ export function FAQ() {
                   className="w-full flex items-center justify-between gap-6 py-5 text-left"
                 >
                   <span className="font-display font-medium text-[#0F172A] text-lg">{q}</span>
-                  <ChevronDown className={`w-5 h-5 shrink-0 text-[#0F172A]/60 transition-transform ${isOpen ? "rotate-180 text-[#00D4FF]" : ""}`} />
+                  <ChevronDown className={`w-5 h-5 shrink-0 text-[#0F172A]/60 transition-transform ${isOpen ? "rotate-180 text-[#5BA829]" : ""}`} />
                 </button>
                 <AnimatePresence initial={false}>
                   {isOpen && (
@@ -649,7 +664,7 @@ export function FinalCTA() {
   return (
     <section id="cta" className="py-28 relative overflow-hidden" style={{ background: "var(--grad-dark)" }}>
       <div className="absolute inset-0 bg-grid opacity-50" />
-      <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[500px] rounded-full bg-[#00D4FF]/20 blur-[120px]" />
+      <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[500px] rounded-full bg-[#5BA829]/20 blur-[120px]" />
       <div className="relative mx-auto max-w-5xl px-6 text-center text-white">
         <motion.h2
           initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
@@ -664,7 +679,7 @@ export function FinalCTA() {
           Join businesses using SmartGeoFleet to improve efficiency, safety, and profitability.
         </motion.p>
         <div className="mt-10 flex flex-wrap justify-center gap-3">
-          <a href="#contact" className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#00D4FF] to-[#00FFA3] text-[#0F172A] px-7 py-3.5 font-semibold shadow-[0_20px_50px_-15px_rgba(0,212,255,0.6)] hover:opacity-90 transition">
+          <a href="#contact" className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#5BA829] to-[#8CE036] text-[#0F172A] px-7 py-3.5 font-semibold shadow-[0_20px_50px_-15px_rgba(0,212,255,0.6)] hover:opacity-90 transition">
             Book a Demo <ArrowRight className="w-4 h-4" />
           </a>
           <a href="#contact" className="inline-flex items-center gap-2 rounded-full glass px-7 py-3.5 font-medium text-white hover:bg-white/10 transition">
@@ -688,11 +703,8 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid lg:grid-cols-5 gap-12">
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-2 font-display font-bold text-lg">
-              <span className="grid place-items-center w-9 h-9 rounded-xl bg-gradient-to-br from-[#00D4FF] to-[#00FFA3] text-[#0F172A]">
-                <TrendingUp className="w-5 h-5" />
-              </span>
-              SmartGeoFleet
+            <div className="inline-flex items-center">
+              <img src="/mylr-logo-white.png" alt="mylr.ai Logo" className="h-8 md:h-10 w-auto object-contain" />
             </div>
             <p className="mt-4 text-sm text-white/60 max-w-sm">
               AI-powered GPS fleet management and vehicle intelligence — for the operations that move the world.
@@ -700,9 +712,9 @@ export function Footer() {
             <form className="mt-6 flex gap-2 max-w-sm" onSubmit={(e) => e.preventDefault()}>
               <input
                 type="email" required placeholder="Work email"
-                className="flex-1 rounded-full bg-white/5 border border-white/10 px-4 py-2.5 text-sm text-white placeholder:text-white/40 outline-none focus:border-[#00D4FF]"
+                className="flex-1 rounded-full bg-white/5 border border-white/10 px-4 py-2.5 text-sm text-white placeholder:text-white/40 outline-none focus:border-[#5BA829]"
               />
-              <button className="rounded-full bg-gradient-to-r from-[#00D4FF] to-[#00FFA3] text-[#0F172A] px-5 py-2.5 text-sm font-semibold">
+              <button className="rounded-full bg-gradient-to-r from-[#5BA829] to-[#8CE036] text-[#0F172A] px-5 py-2.5 text-sm font-semibold">
                 Subscribe
               </button>
             </form>
@@ -723,7 +735,7 @@ export function Footer() {
         </div>
 
         <div className="mt-14 pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/50">
-          <div>© {new Date().getFullYear()} SmartGeoFleet, Inc. All rights reserved.</div>
+          <div>© {new Date().getFullYear()} mylr.ai, Inc. All rights reserved.</div>
           <div className="flex gap-5">
             <a href="#" className="hover:text-white">Privacy</a>
             <a href="#" className="hover:text-white">Terms</a>

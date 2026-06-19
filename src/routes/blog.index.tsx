@@ -30,7 +30,7 @@ function BlogIndex() {
       <PageHero eyebrow="Blog" title="Ideas for the people moving the world." subtitle="Research, playbooks and product thinking from the SmartGeoFleet team.">
         <div className="relative max-w-md">
           <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white/50" />
-          <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search articles…" className="w-full bg-white/5 border border-white/10 rounded-full pl-11 pr-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-[#00D4FF]/60" />
+          <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search articles…" className="w-full bg-white/5 border border-white/10 rounded-full pl-11 pr-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-[#5BA829]/60" />
         </div>
       </PageHero>
 
@@ -38,7 +38,7 @@ function BlogIndex() {
         <div className="mx-auto max-w-7xl px-6">
           <Link to="/blog/$slug" params={{ slug: featured.slug }} className="group block overflow-hidden rounded-3xl bg-[#0F172A] text-white">
             <div className="grid lg:grid-cols-2">
-              <div className="aspect-[16/10] lg:aspect-auto bg-gradient-to-br from-[#00D4FF]/30 to-[#00FFA3]/20 grid place-items-center">
+              <div className="aspect-[16/10] lg:aspect-auto bg-gradient-to-br from-[#5BA829]/30 to-[#8CE036]/20 grid place-items-center">
                 <span className="font-display font-bold text-5xl text-white/30">{featured.category}</span>
               </div>
               <div className="p-10 lg:p-14">
@@ -46,7 +46,7 @@ function BlogIndex() {
                   <span className="px-2 py-0.5 rounded-full bg-white/10">{featured.category}</span>
                   <span>{featured.readTime} · {featured.date}</span>
                 </div>
-                <h2 className="mt-4 font-display font-bold text-3xl lg:text-4xl group-hover:text-[#00FFA3] transition">{featured.title}</h2>
+                <h2 className="mt-4 font-display font-bold text-3xl lg:text-4xl group-hover:text-[#8CE036] transition">{featured.title}</h2>
                 <p className="mt-4 text-white/70">{featured.excerpt}</p>
                 <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold">Read article <ArrowRight className="w-4 h-4" /></span>
               </div>

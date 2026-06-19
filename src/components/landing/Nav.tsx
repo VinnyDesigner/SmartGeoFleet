@@ -34,11 +34,8 @@ export function Nav() {
       }`}
     >
       <div className="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between text-white">
-        <a href="#home" className="flex items-center gap-2 font-display font-bold text-lg">
-          <span className="grid place-items-center w-9 h-9 rounded-xl bg-gradient-to-br from-[#00D4FF] to-[#00FFA3] text-[#0F172A] shadow-[0_0_30px_rgba(0,212,255,0.4)]">
-            <Satellite className="w-5 h-5" strokeWidth={2.5} />
-          </span>
-          <span>SmartGeoFleet</span>
+        <a href="#home" className="flex items-center">
+          <img src="/mylr-logo-white.png" alt="mylr.ai Logo" className="h-8 md:h-10 w-auto object-contain" />
         </a>
 
         <nav className="hidden lg:flex items-center gap-8 text-sm text-white/75">
@@ -53,7 +50,7 @@ export function Nav() {
           <a href="#contact" className="text-sm text-white/80 hover:text-white">Sign in</a>
           <a
             href="#cta"
-            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#00D4FF] to-[#00FFA3] text-[#0F172A] px-5 py-2 text-sm font-semibold shadow-[0_10px_30px_-10px_rgba(0,212,255,0.6)] hover:opacity-90 transition"
+            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#5BA829] to-[#8CE036] text-[#0F172A] px-5 py-2 text-sm font-semibold shadow-[0_10px_30px_-10px_rgba(0,212,255,0.6)] hover:opacity-90 transition"
           >
             Book Demo
           </a>
@@ -78,7 +75,7 @@ export function Nav() {
                   {l.label}
                 </a>
               ))}
-              <a href="#cta" className="mt-2 rounded-full bg-gradient-to-r from-[#00D4FF] to-[#00FFA3] text-[#0F172A] px-5 py-2 text-sm font-semibold text-center">
+              <a href="#cta" className="mt-2 rounded-full bg-gradient-to-r from-[#5BA829] to-[#8CE036] text-[#0F172A] px-5 py-2 text-sm font-semibold text-center">
                 Book Demo
               </a>
             </div>

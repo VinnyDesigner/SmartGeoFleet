@@ -71,7 +71,7 @@ function BookDemoPage() {
               </div>
             ))}
             <div className="p-6 rounded-2xl bg-[#0F172A] text-white">
-              <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-[#00D4FF]"><Calendar className="w-3.5 h-3.5" /> Typical schedule</div>
+              <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-[#5BA829]"><Calendar className="w-3.5 h-3.5" /> Typical schedule</div>
               <p className="mt-3 text-sm text-white/75">Demos available Mon–Fri across global time zones. Most calls are booked within 24 hours of request.</p>
             </div>
           </aside>
@@ -117,7 +117,7 @@ function BookDemoPage() {
                   <label className="text-xs font-semibold text-[#0F172A]/70">Requirements (optional)</label>
                   <textarea name="requirements" rows={4} className="mt-1 w-full rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] px-4 py-3 text-sm focus:outline-none focus:border-[#0F172A]/40" placeholder="Tell us what matters most to your operation." />
                 </div>
-                <button type="submit" className="sm:col-span-2 mt-2 rounded-full bg-gradient-to-r from-[#00D4FF] to-[#00FFA3] text-[#0F172A] py-3.5 font-semibold">Request my demo</button>
+                <button type="submit" className="sm:col-span-2 mt-2 rounded-full bg-gradient-to-r from-[#5BA829] to-[#8CE036] text-[#0F172A] py-3.5 font-semibold">Request my demo</button>
               </form>
             )}
           </div>

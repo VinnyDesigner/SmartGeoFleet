@@ -16,7 +16,7 @@ function WorldMap() {
   return (
     <svg viewBox="0 0 600 300" className="absolute inset-0 w-full h-full opacity-[0.25]">
       {dots.map((d, i) => (
-        <circle key={i} cx={d.x * 10 + 5} cy={d.y * 10 + 5} r="1.2" fill="#00D4FF" />
+        <circle key={i} cx={d.x * 10 + 5} cy={d.y * 10 + 5} r="1.2" fill="#5BA829" />
       ))}
     </svg>
   );
@@ -25,8 +25,8 @@ function WorldMap() {
 function GpsPing({ x, y, delay = 0 }: { x: number; y: number; delay?: number }) {
   return (
     <g transform={`translate(${x} ${y})`}>
-      <circle r="3" fill="#00FFA3" />
-      <circle r="3" fill="none" stroke="#00FFA3" strokeWidth="1.5" opacity="0.6">
+      <circle r="3" fill="#8CE036" />
+      <circle r="3" fill="none" stroke="#8CE036" strokeWidth="1.5" opacity="0.6">
         <animate attributeName="r" from="3" to="22" dur="2.2s" begin={`${delay}s`} repeatCount="indefinite" />
         <animate attributeName="opacity" from="0.7" to="0" dur="2.2s" begin={`${delay}s`} repeatCount="indefinite" />
       </circle>
@@ -51,8 +51,8 @@ function CommandCenter() {
             <span className="w-2.5 h-2.5 rounded-full bg-[#28c840]" />
             <span className="ml-4 text-xs text-white/50 font-mono">smartgeofleet.com/command</span>
           </div>
-          <div className="flex items-center gap-2 text-xs text-[#00FFA3]">
-            <span className="w-2 h-2 rounded-full bg-[#00FFA3] animate-pulse-dot" />
+          <div className="flex items-center gap-2 text-xs text-[#8CE036]">
+            <span className="w-2 h-2 rounded-full bg-[#8CE036] animate-pulse-dot" />
             Live · 247 vehicles
           </div>
         </div>
@@ -61,10 +61,10 @@ function CommandCenter() {
           {/* Sidebar KPIs */}
           <div className="col-span-3 flex flex-col gap-3">
             {[
-              { label: "Active", value: "247", icon: Truck, hue: "#00D4FF" },
-              { label: "On route", value: "189", icon: MapPin, hue: "#00FFA3" },
-              { label: "Avg speed", value: "62", icon: Gauge, hue: "#00D4FF" },
-              { label: "Safety", value: "98%", icon: ShieldCheck, hue: "#00FFA3" },
+              { label: "Active", value: "247", icon: Truck, hue: "#5BA829" },
+              { label: "On route", value: "189", icon: MapPin, hue: "#8CE036" },
+              { label: "Avg speed", value: "62", icon: Gauge, hue: "#5BA829" },
+              { label: "Safety", value: "98%", icon: ShieldCheck, hue: "#8CE036" },
             ].map((k) => (
               <div key={k.label} className="rounded-xl p-3 bg-white/[0.04] border border-white/5">
                 <div className="flex items-center justify-between">
@@ -83,21 +83,21 @@ function CommandCenter() {
             <svg viewBox="0 0 600 340" className="absolute inset-0 w-full h-full">
               <defs>
                 <linearGradient id="route" x1="0" x2="1">
-                  <stop offset="0%" stopColor="#00D4FF" />
-                  <stop offset="100%" stopColor="#00FFA3" />
+                  <stop offset="0%" stopColor="#5BA829" />
+                  <stop offset="100%" stopColor="#8CE036" />
                 </linearGradient>
               </defs>
               <path d="M60,260 C 180,80 260,300 420,120 S 560,200 560,80" fill="none" stroke="url(#route)" strokeWidth="2" className="animate-dash" />
-              <path d="M40,80 C 160,200 280,40 360,200 S 540,260 580,200" fill="none" stroke="#00FFA3" strokeWidth="1.5" opacity="0.5" className="animate-dash" />
+              <path d="M40,80 C 160,200 280,40 360,200 S 540,260 580,200" fill="none" stroke="#8CE036" strokeWidth="1.5" opacity="0.5" className="animate-dash" />
 
               {/* Moving truck */}
               <g>
-                <circle r="6" fill="#00FFA3" stroke="#0B1220" strokeWidth="2">
+                <circle r="6" fill="#8CE036" stroke="#0B1220" strokeWidth="2">
                   <animateMotion dur="9s" repeatCount="indefinite" path="M60,260 C 180,80 260,300 420,120 S 560,200 560,80" />
                 </circle>
               </g>
               <g>
-                <circle r="5" fill="#00D4FF" stroke="#0B1220" strokeWidth="2">
+                <circle r="5" fill="#5BA829" stroke="#0B1220" strokeWidth="2">
                   <animateMotion dur="11s" repeatCount="indefinite" path="M40,80 C 160,200 280,40 360,200 S 540,260 580,200" />
                 </circle>
               </g>
@@ -107,7 +107,7 @@ function CommandCenter() {
               <GpsPing x={470} y={100} delay={1.3} />
 
               {/* Geofence */}
-              <rect x="380" y="170" width="120" height="80" rx="10" fill="#00D4FF" fillOpacity="0.08" stroke="#00D4FF" strokeWidth="1" strokeDasharray="6 6" />
+              <rect x="380" y="170" width="120" height="80" rx="10" fill="#5BA829" fillOpacity="0.08" stroke="#5BA829" strokeWidth="1" strokeDasharray="6 6" />
             </svg>
 
             <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-[10px] text-white/60">
@@ -121,17 +121,17 @@ function CommandCenter() {
             <div className="rounded-xl p-3 bg-white/[0.04] border border-white/5">
               <div className="flex items-center justify-between text-[10px] text-white/50 uppercase tracking-wider">
                 <span>Fuel</span>
-                <Fuel className="w-3.5 h-3.5 text-[#00D4FF]" />
+                <Fuel className="w-3.5 h-3.5 text-[#5BA829]" />
               </div>
               <div className="mt-2 h-2 rounded-full bg-white/10 overflow-hidden">
-                <motion.div initial={{ width: 0 }} animate={{ width: "72%" }} transition={{ duration: 1.5, delay: 1 }} className="h-full bg-gradient-to-r from-[#00D4FF] to-[#00FFA3]" />
+                <motion.div initial={{ width: 0 }} animate={{ width: "72%" }} transition={{ duration: 1.5, delay: 1 }} className="h-full bg-gradient-to-r from-[#5BA829] to-[#8CE036]" />
               </div>
               <div className="mt-1 text-xs text-white/70">72% avg tank</div>
             </div>
 
             {[
-              { name: "Driver · Alex M.", status: "On route", color: "#00FFA3" },
-              { name: "Driver · Sara L.", status: "Idle 4m", color: "#00D4FF" },
+              { name: "Driver · Alex M.", status: "On route", color: "#8CE036" },
+              { name: "Driver · Sara L.", status: "Idle 4m", color: "#5BA829" },
               { name: "Driver · Tom K.", status: "Loading", color: "#fbbf24" },
             ].map((d, i) => (
               <motion.div
@@ -159,7 +159,7 @@ function CommandCenter() {
         transition={{ delay: 1.2 }}
         className="absolute -left-6 top-1/3 hidden md:flex items-center gap-3 px-4 py-3 rounded-2xl glass text-white animate-float shadow-xl"
       >
-        <Activity className="w-5 h-5 text-[#00FFA3]" />
+        <Activity className="w-5 h-5 text-[#8CE036]" />
         <div>
           <div className="text-[10px] text-white/60">AI Insight</div>
           <div className="text-xs font-medium">Reroute saves 18 min</div>
@@ -172,7 +172,7 @@ function CommandCenter() {
         style={{ animationDelay: "1.5s" }}
         className="absolute -right-4 bottom-10 hidden md:flex items-center gap-3 px-4 py-3 rounded-2xl glass text-white animate-float shadow-xl"
       >
-        <ShieldCheck className="w-5 h-5 text-[#00D4FF]" />
+        <ShieldCheck className="w-5 h-5 text-[#5BA829]" />
         <div>
           <div className="text-[10px] text-white/60">Safety score</div>
           <div className="text-xs font-medium">+12% this week</div>
@@ -186,8 +186,8 @@ export function Hero() {
   return (
     <section id="home" className="relative overflow-hidden text-white bg-grid" style={{ background: "var(--grad-dark)" }}>
       {/* glow orbs */}
-      <div className="absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full bg-[#00D4FF]/20 blur-[120px]" />
-      <div className="absolute top-1/2 -right-40 w-[500px] h-[500px] rounded-full bg-[#00FFA3]/15 blur-[120px]" />
+      <div className="absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full bg-[#5BA829]/20 blur-[120px]" />
+      <div className="absolute top-1/2 -right-40 w-[500px] h-[500px] rounded-full bg-[#8CE036]/15 blur-[120px]" />
 
       <div className="relative mx-auto max-w-7xl px-6 pt-32 pb-24 lg:pt-40 lg:pb-32">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
@@ -198,7 +198,7 @@ export function Hero() {
               transition={{ duration: 0.7 }}
               className="inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-xs text-white/80"
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-[#00FFA3] animate-pulse-dot" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#8CE036] animate-pulse-dot" />
               New · AI Predictive Maintenance v2
             </motion.div>
 
@@ -231,7 +231,7 @@ export function Hero() {
             >
               <a
                 href="#cta"
-                className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#00D4FF] to-[#00FFA3] text-[#0F172A] px-6 py-3 font-semibold shadow-[0_20px_50px_-15px_rgba(0,212,255,0.6)] hover:shadow-[0_25px_60px_-15px_rgba(0,255,163,0.6)] transition"
+                className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#5BA829] to-[#8CE036] text-[#0F172A] px-6 py-3 font-semibold shadow-[0_20px_50px_-15px_rgba(0,212,255,0.6)] hover:shadow-[0_25px_60px_-15px_rgba(0,255,163,0.6)] transition"
               >
                 Request Demo
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />

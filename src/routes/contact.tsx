@@ -98,7 +98,7 @@ function ContactPage() {
 
             <div className="mt-8 space-y-5 text-sm">
               <div className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-[#00D4FF] mt-0.5 shrink-0" />
+                <MapPin className="w-5 h-5 text-[#5BA829] mt-0.5 shrink-0" />
                 <div>
                   <div className="font-semibold text-[#0F172A]">{mainOffice.country}</div>
                   <div className="text-[#0F172A]/80 font-medium">{mainOffice.name}</div>
@@ -110,7 +110,7 @@ function ContactPage() {
                 <Mail className="w-5 h-5 text-[#0F172A]/50 mt-0.5 shrink-0" />
                 <div>
                   <div className="font-semibold text-[#0F172A]">Email</div>
-                  <a href={`mailto:${mainOffice.email}`} className="text-[#00D4FF] hover:underline">{mainOffice.email}</a>
+                  <a href={`mailto:${mainOffice.email}`} className="text-[#5BA829] hover:underline">{mainOffice.email}</a>
                 </div>
               </div>
               
@@ -137,7 +137,7 @@ function ContactPage() {
                 {otherOffices.map((o) => (
                   <div key={o.country} className="p-5 rounded-2xl border border-[#E2E8F0] bg-[#F8FAFC] flex flex-col justify-between">
                     <div>
-                      <div className="flex items-center gap-1.5 text-xs uppercase tracking-widest text-[#00D4FF] font-bold">
+                      <div className="flex items-center gap-1.5 text-xs uppercase tracking-widest text-[#5BA829] font-bold">
                         <MapPin className="w-3.5 h-3.5" /> {o.country}
                       </div>
                       <div className="mt-2 font-display font-semibold text-base text-[#0F172A]">{o.name}</div>

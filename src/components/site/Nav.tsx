@@ -40,11 +40,8 @@ export function Nav() {
       }`}
     >
       <div className="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between text-white">
-        <Link to="/" className="flex items-center gap-2 font-display font-bold text-lg">
-          <span className="grid place-items-center w-9 h-9 rounded-xl bg-gradient-to-br from-[#00D4FF] to-[#00FFA3] text-[#0F172A] shadow-[0_0_30px_rgba(0,212,255,0.4)]">
-            <Satellite className="w-5 h-5" strokeWidth={2.5} />
-          </span>
-          <span>SmartGeoFleet</span>
+        <Link to="/" className="flex items-center">
+          <img src="/mylr-logo-white.png" alt="mylr.ai Logo" className="h-8 md:h-10 w-auto object-contain" />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-1 text-sm text-white/80">
@@ -64,7 +61,7 @@ export function Nav() {
 
         <div className="hidden lg:flex items-center gap-3">
           <Link to="/contact" className="text-sm text-white/80 hover:text-white">Contact</Link>
-          <Link to="/book-demo" className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#00D4FF] to-[#00FFA3] text-[#0F172A] px-5 py-2 text-sm font-semibold shadow-[0_10px_30px_-10px_rgba(0,212,255,0.6)] hover:opacity-90">
+          <Link to="/book-demo" className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#5BA829] to-[#8CE036] text-[#0F172A] px-5 py-2 text-sm font-semibold shadow-[0_10px_30px_-10px_rgba(0,212,255,0.6)] hover:opacity-90">
             Book Demo <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
@@ -87,7 +84,7 @@ export function Nav() {
               <div key={m.label} className="mx-auto max-w-7xl px-6 py-10">
                 <div className="flex items-center justify-between mb-6">
                   <div>
-                    <p className="text-xs uppercase tracking-widest text-[#00D4FF]">{m.label}</p>
+                    <p className="text-xs uppercase tracking-widest text-[#5BA829]">{m.label}</p>
                     <h3 className="font-display text-2xl font-bold text-white mt-1">Explore {m.label.toLowerCase()}</h3>
                   </div>
                   <Link to={m.base} className="text-sm text-white/70 hover:text-white flex items-center gap-2">
@@ -103,7 +100,7 @@ export function Nav() {
                         to={to}
                         params={{ slug: it.slug }}
                         onClick={() => setActive(null)}
-                        className="group p-4 rounded-xl border border-white/10 hover:border-[#00D4FF]/50 hover:bg-white/5 transition"
+                        className="group p-4 rounded-xl border border-white/10 hover:border-[#5BA829]/50 hover:bg-white/5 transition"
                       >
                         <div className="text-white font-semibold text-sm">{it.title}</div>
                         <div className="text-white/55 text-xs mt-1 leading-relaxed">{it.short}</div>
@@ -133,7 +130,7 @@ export function Nav() {
                 <Link key={s.href} to={s.href} onClick={() => setOpen(false)} className="py-2">{s.label}</Link>
               ))}
               <Link to="/contact" onClick={() => setOpen(false)} className="py-2">Contact</Link>
-              <Link to="/book-demo" onClick={() => setOpen(false)} className="mt-2 rounded-full bg-gradient-to-r from-[#00D4FF] to-[#00FFA3] text-[#0F172A] px-5 py-2 text-sm font-semibold text-center">
+              <Link to="/book-demo" onClick={() => setOpen(false)} className="mt-2 rounded-full bg-gradient-to-r from-[#5BA829] to-[#8CE036] text-[#0F172A] px-5 py-2 text-sm font-semibold text-center">
                 Book Demo
               </Link>
             </div>

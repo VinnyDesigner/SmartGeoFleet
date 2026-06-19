@@ -29,7 +29,7 @@ function FeaturesIndex() {
       <PageHero eyebrow="Features" title="A complete feature directory." subtitle="Browse every capability of the SmartGeoFleet platform.">
         <div className="relative max-w-md">
           <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white/50" />
-          <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search features…" className="w-full bg-white/5 border border-white/10 rounded-full pl-11 pr-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-[#00D4FF]/60" />
+          <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search features…" className="w-full bg-white/5 border border-white/10 rounded-full pl-11 pr-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-[#5BA829]/60" />
         </div>
       </PageHero>
       <ItemGrid items={filtered} base="/features/$slug" eyebrow={`${filtered.length} of ${features.length} features`} />

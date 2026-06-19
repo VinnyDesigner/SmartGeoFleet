@@ -7,11 +7,8 @@ export function Footer() {
     <footer className="bg-[#0F172A] text-white/70 pt-20 pb-10 border-t border-white/5">
       <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-5 gap-12">
         <div className="lg:col-span-2">
-          <Link to="/" className="flex items-center gap-2 font-display font-bold text-lg text-white">
-            <span className="grid place-items-center w-9 h-9 rounded-xl bg-gradient-to-br from-[#00D4FF] to-[#00FFA3] text-[#0F172A]">
-              <Satellite className="w-5 h-5" strokeWidth={2.5} />
-            </span>
-            SmartGeoFleet
+          <Link to="/" className="inline-flex items-center">
+            <img src="/mylr-logo-white.png" alt="mylr.ai Logo" className="h-8 md:h-10 w-auto object-contain" />
           </Link>
           <p className="mt-4 text-sm max-w-sm leading-relaxed">
             AI-powered fleet intelligence for the world's most demanding operations. Track, optimize, and protect every vehicle, driver and asset.
@@ -20,10 +17,10 @@ export function Footer() {
           {/* Main Address Section */}
           <div className="mt-6 text-xs text-white/60 space-y-1.5 max-w-sm bg-white/5 p-4 rounded-xl border border-white/10">
             <div className="font-semibold text-white flex items-center gap-1.5">
-              <MapPin className="w-3.5 h-3.5 text-[#00D4FF]" />
+              <MapPin className="w-3.5 h-3.5 text-[#5BA829]" />
               USA Headquarters (Main Office)
             </div>
-            <div className="font-medium text-white/80">iSpatial Techno Solutions Inc.</div>
+            <div className="font-medium text-white/80">mylr.ai</div>
             <div>16225 Park Ten Place, Suite 500, Houston, Texas 77084</div>
             <div>Phone: +1 (858) 522 9799</div>
             <div>Email: connectus@ispatialtec.com</div>
@@ -31,7 +28,7 @@ export function Footer() {
 
           <div className="flex items-center gap-3 mt-6">
             {[Twitter, Linkedin, Github, Youtube].map((I, i) => (
-              <a key={i} href="#" className="w-9 h-9 grid place-items-center rounded-lg border border-white/10 hover:border-[#00D4FF]/50 hover:text-white transition">
+              <a key={i} href="#" className="w-9 h-9 grid place-items-center rounded-lg border border-white/10 hover:border-[#5BA829]/50 hover:text-white transition">
                 <I className="w-4 h-4" />
               </a>
             ))}
@@ -78,7 +75,7 @@ export function Footer() {
       </div>
 
       <div className="mx-auto max-w-7xl px-6 mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/50">
-        <p>© {new Date().getFullYear()} SmartGeoFleet. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} mylr.ai. All rights reserved.</p>
         
         <div className="flex items-center gap-6">
           <a href="#" className="hover:text-white">Privacy</a>
@@ -87,11 +84,6 @@ export function Footer() {
           <a href="#" className="hover:text-white">SOC 2</a>
         </div>
 
-        {/* Powered by IST logo section */}
-        <div className="flex items-center gap-2 bg-white/5 px-3 py-1.5 rounded-full border border-white/10">
-          <span>Powered by</span>
-          <img src="/ist-logo.png" alt="IST Logo" className="h-5 w-auto object-contain" />
-        </div>
       </div>
     </footer>
   );

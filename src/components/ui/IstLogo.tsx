@@ -33,14 +33,14 @@ export function IstLogo({ className = "", showIso = true }: IstLogoProps) {
           {/* Stylized Globe/Grid Lines (thin cyan lines) */}
           <path
             d="M50 9A41 41 0 0 1 91 50M9 50A41 41 0 0 1 50 91"
-            stroke="#00D4FF"
+            stroke="#5BA829"
             strokeWidth="1"
             strokeOpacity="0.3"
             strokeDasharray="2 2"
           />
           <path
             d="M50 9c15 10 15 67 0 82"
-            stroke="#00D4FF"
+            stroke="#5BA829"
             strokeWidth="1"
             strokeOpacity="0.2"
           />
@@ -70,8 +70,8 @@ export function IstLogo({ className = "", showIso = true }: IstLogoProps) {
           
           <defs>
             <linearGradient id="istGrad" x1="0" y1="0" x2="100" y2="100">
-              <stop offset="0%" stopColor="#00D4FF" />
-              <stop offset="100%" stopColor="#00FFA3" />
+              <stop offset="0%" stopColor="#5BA829" />
+              <stop offset="100%" stopColor="#8CE036" />
             </linearGradient>
             <linearGradient id="istBlueBg" x1="10" y1="10" x2="90" y2="90">
               <stop offset="0%" stopColor="#1E3A8A" />
@@ -79,8 +79,8 @@ export function IstLogo({ className = "", showIso = true }: IstLogoProps) {
               <stop offset="100%" stopColor="#0F172A" />
             </linearGradient>
             <linearGradient id="istSwooshGrad" x1="25" y1="55" x2="75" y2="55">
-              <stop offset="0%" stopColor="#00FFA3" stopOpacity="0.8" />
-              <stop offset="100%" stopColor="#00D4FF" stopOpacity="0.2" />
+              <stop offset="0%" stopColor="#8CE036" stopOpacity="0.8" />
+              <stop offset="100%" stopColor="#5BA829" stopOpacity="0.2" />
             </linearGradient>
             <filter id="shadow" x="20" y="25" width="60" height="50" filterUnits="userSpaceOnUse">
               <feDropShadow dx="1" dy="2" stdDeviation="2" floodColor="#000000" floodOpacity="0.5" />
@@ -96,9 +96,9 @@ export function IstLogo({ className = "", showIso = true }: IstLogoProps) {
             </span>
           </div>
           {/* Horizontal line */}
-          <div className="h-[2px] w-24 bg-gradient-to-r from-[#00D4FF] to-transparent mt-0.5" />
+          <div className="h-[2px] w-24 bg-gradient-to-r from-[#5BA829] to-transparent mt-0.5" />
           {/* Small subtitle */}
-          <span className="text-[7.5px] font-semibold tracking-[0.2em] text-[#00FFA3] uppercase mt-1">
+          <span className="text-[7.5px] font-semibold tracking-[0.2em] text-[#8CE036] uppercase mt-1">
             iSpatial Techno Solutions
           </span>
         </div>

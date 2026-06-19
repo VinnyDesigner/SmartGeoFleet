@@ -36,13 +36,13 @@ function CasePage() {
     <PageShell crumbs={[{ label: "Case Studies", to: "/case-studies" }, { label: item.client }]}>
       <header className="bg-[#0F172A] text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-25" />
-        <div className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full bg-[#00D4FF]/20 blur-[120px]" />
+        <div className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full bg-[#5BA829]/20 blur-[120px]" />
         <div className="relative mx-auto max-w-7xl px-6 py-20">
           <Link to="/case-studies" className="inline-flex items-center gap-1 text-sm text-white/60 hover:text-white"><ArrowLeft className="w-4 h-4" /> All case studies</Link>
           <div className="mt-6 grid lg:grid-cols-3 gap-10">
             <div className="lg:col-span-2">
-              <div className="text-xs uppercase tracking-widest text-[#00D4FF]">{item.industry}</div>
-              <div className="mt-1 font-display font-bold text-[#00FFA3] tracking-widest">{item.logo}</div>
+              <div className="text-xs uppercase tracking-widest text-[#5BA829]">{item.industry}</div>
+              <div className="mt-1 font-display font-bold text-[#8CE036] tracking-widest">{item.logo}</div>
               <h1 className="mt-4 font-display font-bold text-4xl lg:text-6xl leading-[1.05]">{item.headline}</h1>
               <p className="mt-5 text-white/70 text-lg max-w-2xl">{item.summary}</p>
             </div>

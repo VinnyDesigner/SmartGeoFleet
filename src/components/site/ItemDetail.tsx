@@ -11,7 +11,7 @@ export function ItemDetail({ item, kind, related }: { item: Item; kind: "Solutio
     <>
       <PageHero eyebrow={kind} title={item.title} subtitle={item.description}>
         <div className="flex flex-wrap gap-3">
-          <Link to="/book-demo" className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#00D4FF] to-[#00FFA3] text-[#0F172A] px-5 py-2.5 text-sm font-semibold">
+          <Link to="/book-demo" className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#5BA829] to-[#8CE036] text-[#0F172A] px-5 py-2.5 text-sm font-semibold">
             Book a demo <ArrowRight className="w-4 h-4" />
           </Link>
           <Link to="/contact" className="inline-flex items-center gap-2 rounded-full border border-white/15 text-white px-5 py-2.5 text-sm font-semibold hover:bg-white/5">
@@ -35,14 +35,14 @@ export function ItemDetail({ item, kind, related }: { item: Item; kind: "Solutio
         <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-16 items-start">
           <div>
             <div className="inline-flex items-center gap-3 mb-5">
-              <span className="grid place-items-center w-12 h-12 rounded-xl bg-gradient-to-br from-[#00D4FF]/15 to-[#00FFA3]/15 text-[#0F172A]"><Icon className="w-6 h-6" /></span>
+              <span className="grid place-items-center w-12 h-12 rounded-xl bg-gradient-to-br from-[#5BA829]/15 to-[#8CE036]/15 text-[#0F172A]"><Icon className="w-6 h-6" /></span>
               <span className="text-xs uppercase tracking-widest text-[#0F172A]/50">Benefits</span>
             </div>
             <h2 className="font-display font-bold text-4xl lg:text-5xl tracking-tight">Why teams choose this</h2>
             <ul className="mt-8 space-y-4">
               {item.benefits.map((b, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <span className="mt-1 grid place-items-center w-5 h-5 rounded-full bg-[#00FFA3]/20 text-[#0F172A]"><Check className="w-3 h-3" /></span>
+                  <span className="mt-1 grid place-items-center w-5 h-5 rounded-full bg-[#8CE036]/20 text-[#0F172A]"><Check className="w-3 h-3" /></span>
                   <span className="text-[#0F172A]/80">{b}</span>
                 </li>
               ))}
@@ -62,7 +62,7 @@ export function ItemDetail({ item, kind, related }: { item: Item; kind: "Solutio
       <section className="py-20 bg-[#0F172A] text-white">
         <div className="mx-auto max-w-7xl px-6">
           <div className="max-w-2xl">
-            <p className="text-xs uppercase tracking-widest text-[#00D4FF]">Inside the platform</p>
+            <p className="text-xs uppercase tracking-widest text-[#5BA829]">Inside the platform</p>
             <h2 className="mt-3 font-display font-bold text-4xl lg:text-5xl">A live look at {item.title}</h2>
             <p className="mt-4 text-white/65">A unified command center streams telemetry, scores behavior and triggers workflows the second they're needed.</p>
           </div>
@@ -70,16 +70,16 @@ export function ItemDetail({ item, kind, related }: { item: Item; kind: "Solutio
             {["Real-time map", "Live events", "AI insights"].map((t, i) => (
               <div key={i} className="rounded-2xl border border-white/10 bg-white/5 p-6">
                 <div className="flex items-center justify-between text-xs text-white/55">
-                  <span>{t}</span><span className="inline-flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-[#00FFA3] animate-pulse" />LIVE</span>
+                  <span>{t}</span><span className="inline-flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-[#8CE036] animate-pulse" />LIVE</span>
                 </div>
-                <div className="mt-4 h-40 rounded-xl bg-gradient-to-br from-[#00D4FF]/10 via-transparent to-[#00FFA3]/10 border border-white/5 grid place-items-center">
+                <div className="mt-4 h-40 rounded-xl bg-gradient-to-br from-[#5BA829]/10 via-transparent to-[#8CE036]/10 border border-white/5 grid place-items-center">
                   <Icon className="w-10 h-10 text-white/30" />
                 </div>
                 <div className="mt-4 space-y-2">
                   {[0, 1, 2].map((k) => (
                     <div key={k} className="flex items-center justify-between text-xs text-white/60">
                       <span>Metric {k + 1}</span>
-                      <span className="text-[#00FFA3]">{(Math.random() * 100).toFixed(0)}%</span>
+                      <span className="text-[#8CE036]">{(Math.random() * 100).toFixed(0)}%</span>
                     </div>
                   ))}
                 </div>

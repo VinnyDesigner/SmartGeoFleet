@@ -56,7 +56,7 @@ function BlogPost() {
   const related = posts.filter((p) => p.slug !== post.slug).slice(0, 3);
   return (
     <PageShell crumbs={[{ label: "Blog", to: "/blog" }, { label: post.title }]}>
-      <div className="fixed top-16 left-0 right-0 h-0.5 bg-transparent z-40"><div className="h-full bg-gradient-to-r from-[#00D4FF] to-[#00FFA3] transition-[width]" style={{ width: `${progress}%` }} /></div>
+      <div className="fixed top-16 left-0 right-0 h-0.5 bg-transparent z-40"><div className="h-full bg-gradient-to-r from-[#5BA829] to-[#8CE036] transition-[width]" style={{ width: `${progress}%` }} /></div>
 
       <article className="bg-white">
         <header className="bg-[#0F172A] text-white">
@@ -70,7 +70,7 @@ function BlogPost() {
             <h1 className="mt-5 font-display font-bold text-4xl lg:text-5xl leading-[1.1]">{post.title}</h1>
             <p className="mt-5 text-white/70 text-lg">{post.excerpt}</p>
             <div className="mt-8 flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#00D4FF] to-[#00FFA3] grid place-items-center text-[#0F172A] font-display font-bold">{post.author.split(" ").map((p) => p[0]).join("")}</div>
+              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#5BA829] to-[#8CE036] grid place-items-center text-[#0F172A] font-display font-bold">{post.author.split(" ").map((p) => p[0]).join("")}</div>
               <div className="text-sm"><div className="font-semibold">{post.author}</div><div className="text-white/55">Author</div></div>
               <button className="ml-auto inline-flex items-center gap-2 text-sm text-white/70 hover:text-white"><Share2 className="w-4 h-4" /> Share</button>
             </div>
