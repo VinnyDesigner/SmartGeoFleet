@@ -8,9 +8,9 @@ import { posts } from "@/lib/site-data";
 export const Route = createFileRoute("/blog/")({
   head: () => ({
     meta: [
-      { title: "Blog — SmartGeoFleet" },
+      { title: "Blog — mylr.ai" },
       { name: "description", content: "Research, playbooks and product updates for fleet operations leaders." },
-      { property: "og:title", content: "SmartGeoFleet Blog" },
+      { property: "og:title", content: "mylr.ai Blog" },
       { property: "og:description", content: "Research, playbooks and product updates." },
       { property: "og:url", content: "/blog" },
     ],
@@ -27,7 +27,7 @@ function BlogIndex() {
   const featured = posts[0];
   return (
     <PageShell crumbs={[{ label: "Blog" }]}>
-      <PageHero eyebrow="Blog" title="Ideas for the people moving the world." subtitle="Research, playbooks and product thinking from the SmartGeoFleet team.">
+      <PageHero eyebrow="Blog" title="Ideas for the people moving the world." subtitle="Research, playbooks and product thinking from the mylr.ai team.">
         <div className="relative max-w-md">
           <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white/50" />
           <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search articles…" className="w-full bg-white/5 border border-white/10 rounded-full pl-11 pr-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-[#5BA829]/60" />

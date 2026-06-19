@@ -15,9 +15,9 @@ const schema = z.object({
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — SmartGeoFleet" },
-      { name: "description", content: "Talk to SmartGeoFleet sales, support or partnerships. Global offices and 24/7 enterprise support." },
-      { property: "og:title", content: "Contact SmartGeoFleet" },
+      { title: "Contact — mylr.ai" },
+      { name: "description", content: "Talk to mylr.ai sales, support or partnerships. Global offices and 24/7 enterprise support." },
+      { property: "og:title", content: "Contact mylr.ai" },
       { property: "og:description", content: "Reach out to our team — sales, support, partnerships and press." },
       { property: "og:url", content: "/contact" },
     ],

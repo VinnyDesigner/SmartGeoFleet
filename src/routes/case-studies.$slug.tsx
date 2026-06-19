@@ -12,7 +12,7 @@ export const Route = createFileRoute("/case-studies/$slug")({
   },
   head: ({ loaderData }) => ({
     meta: loaderData ? [
-      { title: `${loaderData.item.client} — SmartGeoFleet Case Study` },
+      { title: `${loaderData.item.client} — mylr.ai Case Study` },
       { name: "description", content: loaderData.item.summary },
       { property: "og:title", content: loaderData.item.headline },
       { property: "og:description", content: loaderData.item.summary },
@@ -63,7 +63,7 @@ function CasePage() {
           {[
             { title: "Challenge", body: item.challenge },
             { title: "Solution", body: item.solution },
-            { title: "Implementation", body: "Rolled out in a phased 90-day plan: discovery, pilot, scale and optimize. SmartGeoFleet's customer team paired with internal champions to drive adoption across all sites." },
+            { title: "Implementation", body: "Rolled out in a phased 90-day plan: discovery, pilot, scale and optimize. mylr.ai's customer team paired with internal champions to drive adoption across all sites." },
             { title: "Results", body: "Outcomes were measured in the first 6 months and verified by an independent audit. The metrics shown above continue to hold or improve year over year." },
           ].map((s, i) => (
             <div key={i}>
@@ -75,7 +75,7 @@ function CasePage() {
 
           <blockquote className="relative p-8 rounded-3xl border border-[#E2E8F0] bg-[#F8FAFC]">
             <Quote className="absolute -top-3 left-6 w-8 h-8 text-[#0F172A]/20" />
-            <p className="text-xl leading-relaxed text-[#0F172A]">"SmartGeoFleet became the operating system for our fleet. The ROI was clear inside 90 days — and it keeps compounding."</p>
+            <p className="text-xl leading-relaxed text-[#0F172A]">"mylr.ai became the operating system for our fleet. The ROI was clear inside 90 days — and it keeps compounding."</p>
             <footer className="mt-4 text-sm text-[#0F172A]/60">VP of Operations, {item.client}</footer>
           </blockquote>
         </div>

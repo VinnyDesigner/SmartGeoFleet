@@ -171,7 +171,7 @@ export const solutions: Item[] = [
 ];
 
 export const industries: Item[] = [
-  { slug: "logistics", title: "Logistics & Distribution", short: "Move freight smarter.", description: "From first mile to last, SmartGeoFleet powers high-volume distribution with real-time visibility and route intelligence.",
+  { slug: "logistics", title: "Logistics & Distribution", short: "Move freight smarter.", description: "From first mile to last, mylr.ai powers high-volume distribution with real-time visibility and route intelligence.",
     icon: Truck,
     benefits: ["Real-time ETAs", "Yard management", "Driver compliance", "Customer portals"],
     features: [{ title: "Dispatch Suite", desc: "Plan, assign and track in one console." }, { title: "ELD/HOS", desc: "Built-in compliance and audit logs." }, { title: "Customer Visibility", desc: "Branded tracking links." }, { title: "Proof of Delivery", desc: "Photo + signature capture." }],
@@ -290,7 +290,7 @@ export type CaseStudy = { slug: string; client: string; industry: string; logo: 
 export const cases: CaseStudy[] = [
   { slug: "northwind-logistics", client: "Northwind Logistics", industry: "Logistics", logo: "NORTHWIND", headline: "Northwind cut delivery times by 31% in 6 months", summary: "How a 4,200-vehicle distribution fleet rebuilt its dispatch operations around live telemetry and AI routing.",
     challenge: "Northwind operated 18 distribution centers with siloed dispatch tools and no shared view of in-transit assets. ETAs were unreliable, harsh-event rates were rising, and the executive team had no single source of truth.",
-    solution: "SmartGeoFleet replaced four legacy platforms with one. Live telemetry, AI route optimization, driver coaching and a unified executive dashboard rolled out across all 18 DCs in 90 days.",
+    solution: "mylr.ai replaced four legacy platforms with one. Live telemetry, AI route optimization, driver coaching and a unified executive dashboard rolled out across all 18 DCs in 90 days.",
     results: [{ value: "-31%", label: "Delivery time" }, { value: "+22%", label: "Stops per day" }, { value: "-58%", label: "Harsh events" }, { value: "$4.2M", label: "Annual savings" }] },
   { slug: "buildwell-construction", client: "Buildwell Construction", industry: "Construction", logo: "BUILDWELL", headline: "Buildwell eliminated $1.8M in equipment theft", summary: "Multi-state contractor uses geofencing and asset tags to protect 6,400 pieces of equipment.",
     challenge: "Buildwell lost millions annually to equipment theft and idle drift across active job sites. Manual checks were inconsistent and after-the-fact.", 
@@ -298,7 +298,7 @@ export const cases: CaseStudy[] = [
     results: [{ value: "-71%", label: "Theft loss" }, { value: "+34%", label: "Utilization" }, { value: "$1.8M", label: "Recovered" }, { value: "6,400", label: "Assets tagged" }] },
   { slug: "urbanmove-transit", client: "UrbanMove Transit", industry: "Public Transport", logo: "URBANMOVE", headline: "UrbanMove lifted on-time performance to 94%", summary: "Regional transit agency modernized AVL and rider experience with one platform.",
     challenge: "Aging AVL infrastructure, no real-time rider information, and bunching during peak hours.",
-    solution: "SmartGeoFleet replaced legacy AVL with modern telematics, rolled out a rider app, and gave dispatchers a headway-management console.",
+    solution: "mylr.ai replaced legacy AVL with modern telematics, rolled out a rider app, and gave dispatchers a headway-management console.",
     results: [{ value: "94%", label: "On-time" }, { value: "-12%", label: "Bunching" }, { value: "+47%", label: "Rider app NPS" }, { value: "320", label: "Vehicles" }] },
   { slug: "schoolnet-transportation", client: "SchoolNet Transportation", industry: "School Transport", logo: "SCHOOL·NET", headline: "SchoolNet protects 180,000 student rides per day", summary: "Nation's largest pupil-transport contractor unified safety, ridership and parent communications.",
     challenge: "Disparate systems for routing, ridership tracking, parent comms, and stop-arm enforcement.",

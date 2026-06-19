@@ -9,9 +9,9 @@ import { cases } from "@/lib/site-data";
 export const Route = createFileRoute("/case-studies/")({
   head: () => ({
     meta: [
-      { title: "Case Studies — SmartGeoFleet" },
-      { name: "description", content: "Real fleets, real numbers. Read how leading operators transformed their fleets with SmartGeoFleet." },
-      { property: "og:title", content: "SmartGeoFleet Case Studies" },
+      { title: "Case Studies — mylr.ai" },
+      { name: "description", content: "Real fleets, real numbers. Read how leading operators transformed their fleets with mylr.ai." },
+      { property: "og:title", content: "mylr.ai Case Studies" },
       { property: "og:description", content: "Customer outcomes across industries." },
       { property: "og:url", content: "/case-studies" },
     ],
@@ -27,7 +27,7 @@ function CasesIndex() {
   const list = cases.filter((c) => (industry === "All" || c.industry === industry) && (c.client + c.headline).toLowerCase().includes(q.toLowerCase()));
   return (
     <PageShell crumbs={[{ label: "Case Studies" }]}>
-      <PageHero eyebrow="Case Studies" title="Real fleets. Measurable results." subtitle="See how leading operators across industries scale safer, faster and leaner with SmartGeoFleet.">
+      <PageHero eyebrow="Case Studies" title="Real fleets. Measurable results." subtitle="See how leading operators across industries scale safer, faster and leaner with mylr.ai.">
         <div className="relative max-w-md">
           <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white/50" />
           <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search case studies…" className="w-full bg-white/5 border border-white/10 rounded-full pl-11 pr-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-[#5BA829]/60" />

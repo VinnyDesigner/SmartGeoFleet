@@ -8,9 +8,9 @@ import { industries } from "@/lib/site-data";
 export const Route = createFileRoute("/industries/")({
   head: () => ({
     meta: [
-      { title: "Industries — SmartGeoFleet" },
+      { title: "Industries — mylr.ai" },
       { name: "description", content: "Purpose-built fleet intelligence for logistics, construction, transit, government, field services and more." },
-      { property: "og:title", content: "SmartGeoFleet for Every Industry" },
+      { property: "og:title", content: "mylr.ai for Every Industry" },
       { property: "og:description", content: "Industry-specific telematics and fleet workflows out of the box." },
       { property: "og:url", content: "/industries" },
     ],

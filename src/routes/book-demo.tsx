@@ -22,9 +22,9 @@ const industriesList = ["Logistics", "Construction", "Public Transport", "School
 export const Route = createFileRoute("/book-demo")({
   head: () => ({
     meta: [
-      { title: "Book a Demo — SmartGeoFleet" },
-      { name: "description", content: "See SmartGeoFleet in action with a personalized demo tailored to your fleet size and industry." },
-      { property: "og:title", content: "Book a SmartGeoFleet Demo" },
+      { title: "Book a Demo — mylr.ai" },
+      { name: "description", content: "See mylr.ai in action with a personalized demo tailored to your fleet size and industry." },
+      { property: "og:title", content: "Book a mylr.ai Demo" },
       { property: "og:description", content: "A 30-minute live demo, tailored to your operations." },
       { property: "og:url", content: "/book-demo" },
     ],
@@ -51,7 +51,7 @@ function BookDemoPage() {
   };
   return (
     <PageShell crumbs={[{ label: "Book a Demo" }]}>
-      <PageHero eyebrow="Book a Demo" title="See SmartGeoFleet live, on your data." subtitle="A 30-minute personalized walkthrough with a fleet specialist. We'll tailor the demo to your industry, fleet size and use cases." />
+      <PageHero eyebrow="Book a Demo" title="See mylr.ai live, on your data." subtitle="A 30-minute personalized walkthrough with a fleet specialist. We'll tailor the demo to your industry, fleet size and use cases." />
 
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-6xl px-6 grid lg:grid-cols-5 gap-10">

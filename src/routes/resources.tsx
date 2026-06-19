@@ -18,9 +18,9 @@ const items = [
 export const Route = createFileRoute("/resources")({
   head: () => ({
     meta: [
-      { title: "Resources — SmartGeoFleet" },
+      { title: "Resources — mylr.ai" },
       { name: "description", content: "Guides, whitepapers, calculators and industry reports for fleet operations leaders." },
-      { property: "og:title", content: "SmartGeoFleet Resource Hub" },
+      { property: "og:title", content: "mylr.ai Resource Hub" },
       { property: "og:description", content: "Guides, whitepapers and tools for fleet operators." },
       { property: "og:url", content: "/resources" },
     ],

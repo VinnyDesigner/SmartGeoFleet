@@ -49,7 +49,7 @@ function CommandCenter() {
             <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]" />
             <span className="w-2.5 h-2.5 rounded-full bg-[#febc2e]" />
             <span className="w-2.5 h-2.5 rounded-full bg-[#28c840]" />
-            <span className="ml-4 text-xs text-white/50 font-mono">smartgeofleet.com/command</span>
+            <span className="ml-4 text-xs text-white/50 font-mono">mylr.ai.com/command</span>
           </div>
           <div className="flex items-center gap-2 text-xs text-[#8CE036]">
             <span className="w-2 h-2 rounded-full bg-[#8CE036] animate-pulse-dot" />

@@ -11,9 +11,9 @@ export const Route = createFileRoute("/features/$slug")({
   },
   head: ({ loaderData }) => ({
     meta: loaderData ? [
-      { title: `${loaderData.item.title} — SmartGeoFleet Features` },
+      { title: `${loaderData.item.title} — mylr.ai Features` },
       { name: "description", content: loaderData.item.description },
-      { property: "og:title", content: `${loaderData.item.title} — SmartGeoFleet` },
+      { property: "og:title", content: `${loaderData.item.title} — mylr.ai` },
       { property: "og:description", content: loaderData.item.description },
       { property: "og:url", content: `/features/${loaderData.item.slug}` },
     ] : [],

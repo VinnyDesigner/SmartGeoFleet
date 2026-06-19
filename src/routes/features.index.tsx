@@ -10,10 +10,10 @@ import { features } from "@/lib/site-data";
 export const Route = createFileRoute("/features/")({
   head: () => ({
     meta: [
-      { title: "Features — SmartGeoFleet" },
-      { name: "description", content: "Every capability of the SmartGeoFleet platform: live tracking, alerts, geofencing, dashboards, mobile, scorecards, reports and more." },
-      { property: "og:title", content: "SmartGeoFleet Features" },
-      { property: "og:description", content: "A complete feature directory for the SmartGeoFleet platform." },
+      { title: "Features — mylr.ai" },
+      { name: "description", content: "Every capability of the mylr.ai platform: live tracking, alerts, geofencing, dashboards, mobile, scorecards, reports and more." },
+      { property: "og:title", content: "mylr.ai Features" },
+      { property: "og:description", content: "A complete feature directory for the mylr.ai platform." },
       { property: "og:url", content: "/features" },
     ],
     links: [{ rel: "canonical", href: "/features" }],
@@ -26,7 +26,7 @@ function FeaturesIndex() {
   const filtered = useMemo(() => features.filter((f) => (f.title + f.short).toLowerCase().includes(q.toLowerCase())), [q]);
   return (
     <PageShell crumbs={[{ label: "Features" }]}>
-      <PageHero eyebrow="Features" title="A complete feature directory." subtitle="Browse every capability of the SmartGeoFleet platform.">
+      <PageHero eyebrow="Features" title="A complete feature directory." subtitle="Browse every capability of the mylr.ai platform.">
         <div className="relative max-w-md">
           <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white/50" />
           <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search features…" className="w-full bg-white/5 border border-white/10 rounded-full pl-11 pr-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-[#5BA829]/60" />

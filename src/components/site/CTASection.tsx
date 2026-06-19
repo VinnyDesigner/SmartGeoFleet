@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 
-export function CTASection({ title = "Ready to transform your fleet?", subtitle = "Talk to a SmartGeoFleet specialist and see a live demo tailored to your operations." }: { title?: string; subtitle?: string }) {
+export function CTASection({ title = "Ready to transform your fleet?", subtitle = "Talk to a mylr.ai specialist and see a live demo tailored to your operations." }: { title?: string; subtitle?: string }) {
   return (
     <section className="bg-white py-24">
       <div className="mx-auto max-w-6xl px-6">

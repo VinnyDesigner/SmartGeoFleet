@@ -10,9 +10,9 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "SmartGeoFleet — AI-Powered Fleet Intelligence Platform" },
-      { name: "description", content: "Track vehicles, monitor drivers, optimize routes, reduce costs, and improve safety with SmartGeoFleet's AI-powered fleet management platform." },
-      { property: "og:title", content: "SmartGeoFleet — AI-Powered Fleet Intelligence" },
+      { title: "mylr.ai — AI-Powered Fleet Intelligence Platform" },
+      { name: "description", content: "Track vehicles, monitor drivers, optimize routes, reduce costs, and improve safety with mylr.ai's AI-powered fleet management platform." },
+      { property: "og:title", content: "mylr.ai — AI-Powered Fleet Intelligence" },
       { property: "og:description", content: "Real-time GPS, AI routing and driver intelligence for modern fleets." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },

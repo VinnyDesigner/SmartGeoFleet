@@ -95,7 +95,7 @@ export function Why() {
     <section id="features" className="py-28 bg-[#F8FAFC] bg-grid-light relative overflow-hidden">
       <div className="mx-auto max-w-7xl px-6">
         <SectionTitle
-          eyebrow="Why SmartGeoFleet"
+          eyebrow="Why mylr.ai"
           title="Everything your fleet needs in one intelligent platform"
           subtitle="From real-time GPS to AI insights — every operational lever, unified."
         />
@@ -505,7 +505,7 @@ export function HowItWorks() {
 
 /* ---------- Testimonials ---------- */
 const quotes = [
-  { q: "SmartGeoFleet cut our fuel spend by 28% in six months while making our drivers measurably safer.", n: "Marcus Reeves", r: "VP Operations · Northwind Logistics", m: "−28% fuel · 612 vehicles" },
+  { q: "mylr.ai cut our fuel spend by 28% in six months while making our drivers measurably safer.", n: "Marcus Reeves", r: "VP Operations · Northwind Logistics", m: "−28% fuel · 612 vehicles" },
   { q: "It's the first platform our dispatch, maintenance and finance teams actually agree on.", n: "Priya Shah", r: "COO · UrbanMove", m: "+19% on-time · 1,400 trips/day" },
   { q: "Predictive maintenance has paid for the entire platform three times over.", n: "Diego Alvarez", r: "Director Fleet · BuildWell Construction", m: "318 repairs avoided" },
 ];
@@ -598,9 +598,9 @@ export function Resources() {
 
 /* ---------- FAQ ---------- */
 const faqs = [
-  ["How quickly can we deploy SmartGeoFleet?", "Most fleets are fully live within 30 minutes of receiving devices. Enterprise rollouts typically complete in under 2 weeks."],
+  ["How quickly can we deploy mylr.ai?", "Most fleets are fully live within 30 minutes of receiving devices. Enterprise rollouts typically complete in under 2 weeks."],
   ["Do you support OBD-II and hardwired installs?", "Yes — we ship plug-and-play OBD-II, hardwired, and asset beacons. All devices auto-provision."],
-  ["Is SmartGeoFleet secure and compliant?", "We're SOC 2 Type II, ISO 27001 and GDPR ready. All data is encrypted at rest and in transit."],
+  ["Is mylr.ai secure and compliant?", "We're SOC 2 Type II, ISO 27001 and GDPR ready. All data is encrypted at rest and in transit."],
   ["Can I integrate with my existing TMS or ERP?", "Yes, we offer 60+ pre-built integrations plus a documented REST and webhook API."],
   ["What kind of support do you offer?", "Email support on Starter, priority chat on Professional, and a dedicated CSM on Enterprise."],
   ["Does the platform support electric vehicles?", "Full EV telemetry including state of charge, range estimation, and charger compatibility."],
@@ -609,7 +609,7 @@ const faqs = [
   ["What hardware compatibility do you offer?", "Compatible with all major OBD-II vehicles from 1996+, and most heavy-duty J1939 trucks."],
   ["Do you support international deployments?", "Yes — global cellular coverage in 190+ countries with multi-language support."],
   ["How accurate is GPS tracking?", "Sub-3-meter accuracy with second-by-second updates. Indoor positioning via cell triangulation."],
-  ["Can dispatchers send messages to drivers?", "Yes — two-way messaging, route updates, and turn-by-turn navigation via the SmartGeoFleet Driver app."],
+  ["Can dispatchers send messages to drivers?", "Yes — two-way messaging, route updates, and turn-by-turn navigation via the mylr.ai Driver app."],
   ["What reports come out of the box?", "120+ pre-built dashboards plus a drag-and-drop report builder and scheduled exports."],
   ["Do you offer single sign-on?", "SAML SSO and SCIM provisioning included on Enterprise plans."],
   ["How is pricing calculated?", "Per active vehicle per month, billed annually or monthly. No setup fees."],
@@ -617,7 +617,7 @@ const faqs = [
   ["Do you have a mobile app?", "Native iOS and Android apps for managers, dispatchers and drivers."],
   ["What's your platform uptime?", "99.99% historical uptime, backed by a contractual SLA on Enterprise."],
   ["How does predictive maintenance work?", "AI models trained on millions of trips forecast component failures before they ground a vehicle."],
-  ["Can we self-host SmartGeoFleet?", "Cloud-native by default, with an on-prem connector available for regulated industries."],
+  ["Can we self-host mylr.ai?", "Cloud-native by default, with an on-prem connector available for regulated industries."],
 ];
 export function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
@@ -676,7 +676,7 @@ export function FinalCTA() {
           initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.15 }}
           className="mt-6 text-lg text-white/70 max-w-2xl mx-auto"
         >
-          Join businesses using SmartGeoFleet to improve efficiency, safety, and profitability.
+          Join businesses using mylr.ai to improve efficiency, safety, and profitability.
         </motion.p>
         <div className="mt-10 flex flex-wrap justify-center gap-3">
           <a href="#contact" className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#5BA829] to-[#8CE036] text-[#0F172A] px-7 py-3.5 font-semibold shadow-[0_20px_50px_-15px_rgba(0,212,255,0.6)] hover:opacity-90 transition">
