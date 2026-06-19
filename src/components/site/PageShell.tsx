@@ -9,7 +9,7 @@ export type Crumb = { label: string; to?: string };
 export function PageShell({ crumbs, children }: { crumbs?: Crumb[]; children: ReactNode }) {
   return (
     <div className="min-h-screen bg-white text-[#0F172A]">
-      <Nav />
+      <Nav isInterior />
       <div className="pt-16">
         {crumbs && crumbs.length > 0 && (
           <div className="bg-[#0F172A] border-b border-white/5">

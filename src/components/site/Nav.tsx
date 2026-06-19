@@ -17,7 +17,7 @@ const simple = [
   { label: "Company", href: "/about" as const },
 ];
 
-export function Nav() {
+export function Nav({ isInterior = false }: { isInterior?: boolean }) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState<string | null>(null);
@@ -36,7 +36,7 @@ export function Nav() {
       transition={{ duration: 0.5 }}
       onMouseLeave={() => setActive(null)}
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-        scrolled || active ? "bg-[#0F172A]/90 backdrop-blur-xl border-b border-white/10" : "bg-transparent"
+        scrolled || active || isInterior ? "bg-[#0F172A]/90 backdrop-blur-xl border-b border-white/10" : "bg-transparent"
       }`}
     >
       <div className="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between text-white">
